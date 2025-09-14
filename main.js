@@ -1,4 +1,3 @@
-// === Fireworks ===
 const PI2 = Math.PI * 2;
 const random = (min, max) => (Math.random() * (max - min + 1) + min) | 0;
 const timestamp = () => new Date().getTime();
@@ -130,7 +129,6 @@ class Firework {
   }
 }
 
-// === Init fireworks ===
 let canvas = document.getElementById("birthday");
 let ctx = canvas.getContext("2d");
 let then = timestamp();
@@ -147,42 +145,40 @@ document.ontouchstart = (evt) => birthday.onClick(evt);
   birthday.update(delta / 1000);
 })();
 
-// === Greeting text ===
 const messages = [
   "С Днём Рождения, Ксюша!",
-  "текст!",
-  "текст слайда",
-  "стэйс смотри",
-  "Hello World!",
+  "Пусть этот год для тебя будет еще лучше всех предыдущих",
+  "Счастья тебе, здоровья (чтоб вены не воспалялись!)",
+  "Любви, денег многа",
+  "Оставайся такой же красивой, веселой, доброй",
+  "Потому что веселье - это очень круто",
+  "Нужно сохранять статус гиббонихи",
+  "Чтоб все мечты сбывались",
+  "Чтоб не грустила больше никогда",
+  "И вообще спасибо тебе за все - ты прекрасный человек",
   "🥳🎉 🫶🏻 🎂🎊🍰"
 ];
 
 let currentIndex = 0;
 const greetingEl = document.getElementById("greeting");
-const switchTimeout = 5000; // 5 секунд
+const switchTimeout = 5000; 
 
 function showMessage(index) {
-  // исчезновение
   greetingEl.style.animation = "fadeOut 0.5s forwards";
 
   setTimeout(() => {
-    // смена текста
     greetingEl.textContent = messages[index];
-    // появление
     greetingEl.style.animation = "fadeIn 1s forwards";
   }, 500);
 }
 
-// первый запуск
 setTimeout(() => showMessage(0), 200);
 
-// автосмена
 setInterval(() => {
   currentIndex = (currentIndex + 1) % messages.length;
   showMessage(currentIndex);
 }, switchTimeout);
 
-// ручная смена по клику
 greetingEl.addEventListener("click", () => {
   currentIndex = (currentIndex + 1) % messages.length;
   showMessage(currentIndex);
