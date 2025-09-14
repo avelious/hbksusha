@@ -79,7 +79,7 @@ h1 {
   left: 50%;
   transform: translateX(-50%);
   z-index: 20;  
-  margin-bottom: 50%;    /* поверх фейерверков */
+  margin-bottom: 40%;    /* поверх фейерверков */
 }
 }
 
