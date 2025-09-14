@@ -4,7 +4,6 @@ body {
   cursor: crosshair;
 }
 canvas{display:block}
-/* Заголовок — общий стиль */
 #greeting {
   position: absolute;
   top: 20%;
@@ -16,12 +15,11 @@ canvas{display:block}
   font-weight: 900;
   text-align: center;
   text-shadow: 0 0 15px #000;
-  opacity: 0; /* по умолчанию скрыт, будем показывать через JS */
+  opacity: 0; 
   transition: opacity 0.55s ease, transform 0.55s ease;
-  pointer-events: auto; /* чтобы можно было кликать по тексту на мобиле */
+  pointer-events: auto; 
 }
 
-/* Мобильная версия */
 @media (max-width: 767px) {
   #greeting {
     font-size: 2.6em;
@@ -59,27 +57,27 @@ h1 {
 
 .gif-container {
   position: fixed;
-  bottom: 20px;     /* отступ снизу */
+  bottom: 20px;     
   left: 50%;
   transform: translateX(-50%);
   z-index: 20;  
-  margin-bottom: 20%;    /* поверх фейерверков */
+  margin-bottom: 20%;   
 }
 
 .gif-container img {
-  max-width: 300px;  /* размер можно менять */
+  max-width: 300px;  
   height: auto;
-  pointer-events: none; /* чтобы клик не мешал */
+  pointer-events: none; 
 }
 
 @media (max-width: 767px) {
     .gif-container {
   position: fixed;
-  bottom: 20px;     /* отступ снизу */
+  bottom: 20px;   
   left: 50%;
   transform: translateX(-50%);
   z-index: 20;  
-  margin-bottom: 40%;    /* поверх фейерверков */
+  margin-bottom: 40%;  
 }
 }
 
@@ -88,11 +86,11 @@ h1 {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 15; /* поверх фейерверков */
+  z-index: 15;
 }
 
 .launcher img {
-  width: 150px;   /* размер картинки, можешь менять */
+  width: 150px;   
   height: auto;
-  pointer-events: none; /* чтобы клики не мешали */
+  pointer-events: none; 
 }
