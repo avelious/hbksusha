@@ -22,7 +22,7 @@ canvas{display:block}
 
 @media (max-width: 767px) {
   #greeting {
-    font-size: 2.6em;
+    font-size: 2.1em;
     top: 18%;
     color: pink;
     padding: 0 16px;
